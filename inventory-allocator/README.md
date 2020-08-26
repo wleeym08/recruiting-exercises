@@ -52,3 +52,17 @@ We'll evaluate your code via the following guidelines in no particular order:
 2. **Correctness**: is the solution correct and does it solve the problem
 1. **Test Code Quality**: Is the test code comperehensive and covering all cases.
 1. **Tool/Language mastery**: is the code using up to date syntax and techniques. 
+
+### How to run tests
+
+Set up virtual environment and install packages.
+
+```
+cd inventory-allocator
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+Then, run `pytest -v` to test the module. Run `deactivate` to exit the
+virtual environment.
