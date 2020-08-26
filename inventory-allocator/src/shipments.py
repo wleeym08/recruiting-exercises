@@ -36,7 +36,7 @@ class InventoryAllocator:
                     dist[item] = stock_amount if rest_amount > 0 else order_amount 
 
                     # Update the remaining amount of the order, if it's 
-                    # already fulfill, remove this item from the order
+                    # already fulfilled, remove this item from the order
                     if rest_amount > 0:
                         order[item] = rest_amount
                     else:
@@ -48,7 +48,7 @@ class InventoryAllocator:
             if dist:
                 shipment.append({w["name"]: dist})
             
-            # Check if we still need items for the other, if not
+            # Check if we still need items for the order, if so 
             # return the sorted list of shipment
             if not order:
                 return sorted(shipment, key=lambda x: list(x.keys())[0])
